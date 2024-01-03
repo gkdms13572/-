@@ -1,0 +1,8 @@
+.portfolio-header {
+  background-color: #946a6a; /* 배경색 지정 */
+  padding: 20px; /* 안쪽 여백 지정 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+  font-family: Arial, sans-serif; /* 글꼴 설정 */
+  color: rgb(171, 39, 39)f7f; /* 텍스트 색상 지정 */
+  border-bottom: 2px solid #ccc; /* 아래쪽 테두리 설정 */
+}
