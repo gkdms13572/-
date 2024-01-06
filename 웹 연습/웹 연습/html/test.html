@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haeun's Portfolio</title>
+  <style>
+    /* 전체 스타일 */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: rgb(223, 223, 222);
+    }
+    header {
+      background-color: #dfdc88;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-family: 'Black Han Sans', sans-serif;
+      font-size: 30px;
+    }
+    nav {
+      background-color: #f2f2f2;
+      padding: 20px;
+      text-align: center;
+      font-family: 'Black Han Sans', sans-serif;
+      font-size: 30px;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      display: inline-block;
+      padding: 10px 20px;
+      border: 2px solid #333;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    nav ul li a:hover {
+      background-color: #333;
+      color: white;
+    }
+    section {
+      padding: 20px;
+      font-family: 'Black Han Sans', sans-serif;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+
+    #home {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      background-color: #ffffff; /* 'SEO HA EUN' 배경색 */
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    #home h1 {
+      font-size: 10vw;
+      margin: 0;
+      padding: 0;
+      white-space: nowrap;
+      line-height: 1;
+      color: transparent;
+      background-image: linear-gradient(to right, #eeea7d, #dbcf27);
+      -webkit-background-clip: text;
+      background-clip: text;
+      animation: fadeIn 2s ease-in-out; /* 애니메이션 적용 */
+    }
+    
+    /* About Me 섹션 스타일 */
+    #about {
+      background-color: #f9f9f9;
+      padding: 50px;
+      text-align: center;
+    }
+
+    .about-content {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .about-content img {
+      max-width: 300px;
+      border-radius: 50%;
+    }
+
+    .about-content p {
+      font-size: 18px;
+    }
+
+    /* Project 섹션 스타일 */
+  #project {
+      background-color: #ffffff;
+      padding: 50px;
+      text-align: center;
+    }
+
+    /* Skills 섹션 스타일 */
+    #skills {
+      background-color: #f2f2f2;
+      padding: 50px;
+      text-align: center;
+    }
+
+    #skills img {
+      width: 100px;
+      height: 100px;
+      margin: 15px;
+    }
+
+    #contact {
+      background-color: #dae6a1;
+      padding: 50px;
+      text-align: center;
+    }
+
+    /* About Me 섹션의 제목 크기 키우기 */
+#about h2 {
+  font-size: 36px;
+}
+
+/* Projects 섹션의 제목 크기 키우기 */
+#project h1 {
+  font-size: 36px;
+}
+
+/* Skills 섹션의 제목 크기 키우기 */
+#skills h2 {
+  font-size: 36px;
+}
+
+/* Contact 섹션의 제목 크기 키우기 */
+#contact h2 {
+  font-size: 36px;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Haeun's Portfolio</h1>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+  </header>
+
+  <nav>
+    <ul>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#project">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" style="position: relative; height: 100vh; display: flex; justify-content: center; align-items: center; overflow: hidden;">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+      <h1>SEO HA EUN</h1>
+    </div>
+  </section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="about-content">
+    <img src="./ABOUT ME 사진.jpg" alt="" style="max-width: 100%; height: auto;">
+    <p><strong>안녕하세요 풀스택 개발자 <mark>서하은</mark>입니다</strong></p>
+  </div>
+</section>
+
+
+<section id="project">
+  <h1>Projects</h1>
+  <h2>디자인</h2>
+  <div class="image-grid" style="display: flex; flex-direction: column;">
+    <div class="image-frame" style="display: flex; align-items: center; margin-bottom: 20px;">
+      <img src="./일러스트.png" alt="" style="width: 700px; height: 500px; margin-right: 20px;">
+      <p>일러스트를 사용한 풍경 포스터</p>
+    </div>
+    <div class="image-frame" style="display: flex; align-items: center; margin-bottom: 20px;">
+      <img src="./학교 실내 1.png" alt="" style="width: 700px; height: 500px; margin-right: 20px;">
+      <p>언리얼 엔진을 사용한 학교 실사화 레벨 제작 강의실 1</p>
+    </div>
+    <div class="image-frame" style="display: flex; align-items: center; margin-bottom: 20px;">
+      <img src="./학교 실내 2.png" alt="" style="width: 700px; height: 500px; margin-right: 20px;">
+      <p>언리얼 엔진을 사용한 학교 실사화 레벨 제작 강의실 2</p>
+    </div>
+    <div class="image-frame" style="display: flex; align-items: center; margin-bottom: 20px;">
+      <img src="./학교 실내 3.png" alt="" style="width: 700px; height: 500px; margin-right: 20px;">
+      <p>언리얼 엔진을 사용한 학교 실사화 레벨 제작 강의실 3</p>
+    </div>
+  </div>
+  <!-- 다른 부분들 ... -->
+</section>
+
+
+
+    <h2>프론트앤드</h2>
+    <div class="image-grid">
+      <div class="image-frame">
+        <img src="./" alt="">
+
+    <h2>백앤드</h2>
+    <div class="image-grid">
+      <div class="image-frame">
+        <img src="./" alt="">
+  
+    <h2>데이터 분석</h2>
+    <div class="image-grid">
+      <div class="image-frame">
+          <img src="./" alt="">
+
+    <h2>동영상</h2>
+    <video width="640" height="360" controls>
+      <source src="./언리얼 동영상.mp4" type="">
+    </video>     
+      <p>설명칸</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div>
+      <img src="skill1.jpg" alt="Skill 1">
+      <img src="skill2.jpg" alt="Skill 2">
+    </div>
+    <div>
+      <img src="skill3.jpg" alt="Skill 3">
+      <img src="skill4.jpg" alt="Skill 4">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: example@example.com</p>
+    <p>Phone: +1234567890</p>
+  </section>
+
+</body>
+</html>
