@@ -17,39 +17,68 @@
       color: white;
       padding: 10px;
       text-align: center;
-      font-family: 'Black Han Sans', sans-serif;
+      font-family: 'Cormorant Garamond', serif; /* 변경된 폰트 */
       font-size: 30px;
     }
     nav {
-      background-color: #f2f2f2;
-      padding: 20px;
-      text-align: center;
-      font-family: 'Black Han Sans', sans-serif;
-      font-size: 30px;
-    }
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-    nav ul li {
-      display: inline;
-      margin-right: 20px;
-    }
+  background-color: rgba(0, 0, 0, 0.7); /* 검정색 투명도 70% */
+  padding: 20px;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif; /* 변경된 폰트 */
+  font-size: 30px;
+}
 
-    nav ul li a {
-      display: inline-block;
-      padding: 10px 20px;
-      border: 2px solid #333;
-      border-radius: 5px;
-      text-decoration: none;
-      color: #333;
-    }
+nav ul {
+  display: flex; /* 가로 정렬을 위해 flexbox 사용 */
+  justify-content: center; /* 가운데 정렬 */
+  list-style-type: none; /* 기본 목록 표시 스타일 제거 */
+  padding: 0;
+}
 
-    nav ul li a:hover {
-      background-color: #333;
-      color: white;
-    }
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* 마지막 메뉴 아이템의 우측 마진 제거 */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff; /* 흰색 글자색 */
+  padding: 10px 20px;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+nav ul li a:hover {
+  background-color: #fff; /* 호버 시 배경색 흰색으로 변경 */
+  color: #000; /* 호버 시 글자색 검정색으로 변경 */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 15px 25px; /* 상하 15px, 좌우 25px의 패딩 */
+  font-size: 30px; /* 글자 크기 조정 */
+  letter-spacing: 2px; /* 글자 간격 조정 */
+  }
+
+  nav ul {
+  display: flex;
+  justify-content: space-around; /* 각 항목을 동일한 간격으로 배치 */
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px; /* 각 항목의 좌우 여백 조정 */
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* 마지막 메뉴 항목의 우측 여백은 없도록 설정 */
+}
+
+
     section {
       padding: 20px;
       font-family: 'Black Han Sans', sans-serif;
@@ -65,14 +94,32 @@
     }
 
     #home {
-      position: relative;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      background-color: #99b6cb; /* 'SEO HA EUN' 배경색 */
-    }
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-image: url('하늘.jpg'); /* 배경 이미지 경로 설정 */
+  background-size: cover; /* 화면에 꽉 차도록 이미지 크기 조절 */
+  background-position: center; /* 이미지를 가운데 정렬 */
+  background-repeat: no-repeat; /* 이미지 반복 방지 */
+}
+
+#home h1 {
+  font-size: 10vw;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  line-height: 1;
+  color: transparent;
+  background-image: linear-gradient(to right, #eeea7d, #dbcf27);
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: fadeIn 3s ease-in-out;
+}
+
+
 
     @keyframes fadeIn {
       0% {
@@ -83,74 +130,35 @@
       }
     }
 
-    #home h1 {
-      font-size: 10vw;
-      margin: 0;
-      padding: 0;
-      white-space: nowrap;
-      line-height: 1;
-      color: transparent;
-      background-image: linear-gradient(to right, #eeea7d, #dbcf27);
-      -webkit-background-clip: text;
-      background-clip: text;
-      animation: fadeIn 2s ease-in-out; /* 애니메이션 적용 */
-    }
-    
-    /* About Me 섹션 스타일 */
-    #about {
-      background-color: #f9f9f9;
-      padding: 50px;
-      text-align: center;
-    }
+/* About Me 섹션 스타일 */
+#about {
+  background-color: #ffffff; /* 배경색 변경 */
+  padding: 50px;
+  text-align: center;
+}
 
-    .about-content {
-      margin-top: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+.about-content {
+  margin-top: 20px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
 
-    .about-content img {
-      max-width: 300px;
-      border-radius: 50%;
-    }
+.about-content img {
+  max-width: 700px; /* 사진 크기 늘리기 */
+  border-radius: 50%;
+}
 
-    .about-content p {
-      font-size: 18px;
-    }
+.about-content p {
+  font-size: 40px; /* 텍스트 크기 변경 */
+}
+
 
     /* Project 섹션 스타일 */
-    #project {
-      background-color: #e6f7ff;
+  #project {
+      background-color: #ffffff;
       padding: 50px;
       text-align: center;
-    }
-
-    .image-grid {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 30px;
-    }
-
-    .image-frame {
-      flex: 1 1 calc(25% - 20px);
-      border: 2px solid #333;
-      padding: 20px;
-      box-sizing: border-box;
-      text-align: center;
-      border-radius: 15px;
-      background-color: #fff;
-    }
-
-    .image-frame img {
-      max-width: 100%;
-      border-radius: 10px;
-    }
-
-    .image-frame p {
-      margin-top: 10px;
-      font-size: 14px;
     }
 
     /* Skills 섹션 스타일 */
@@ -207,11 +215,15 @@
     <ul>
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#project">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+      <li><a href="#about" style="font-size: 35px;">About Me</a></li>
+      <li><a href="#project" style="font-size: 35px;">Projects</a></li>
+      <li><a href="#skills" style="font-size: 35px;">Skills</a></li>
+      <li><a href="#contact" style="font-size: 35px;">Contact</a></li>
+      </nav>
+      
+
+
     </ul>
   </nav>
 
@@ -221,60 +233,82 @@
     </div>
   </section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="about-content">
-      <img src="./ABOUT ME 사진.jpg" alt="">
-      <p><strong>안녕하세요 풀스택 개발자 <mark>서하은</mark>입니다</strong></p>
+  <section id="about" style="padding: 50px 0;">
+    <h2 style="font-size: 80px; text-align: center;">About me</h2>
+    <div class="about-content" style="display: flex; justify-content: center; align-items: center;">
+      <div style="margin-right: 40px;">
+        <p style="font-family: 'Cormorant Garamond', serif; font-size: 50px; text-align: center;">
+          <strong>안녕하세요 풀스택 개발자 서하은입니다.</strong><br>
+          아직 미완성이지만 멋진 포트폴리오가 될 예정입니다
+        </p>
+      </div>
+      <div style="margin-left: 40px;">
+        <img src="./내 사진.jpg" alt="" style="width: 600px; height: auto; border-radius: 10%;">
+        <p style="text-align: center;"></p>
+      </div>
     </div>
   </section>
-
-  <section id="project">
-    <h1>Projects</h1>
-    <h2>디자인</h2>
-    <div class="image-grid">
-      <div class="image-frame">
-        <img src="./일러스트.png" alt="">
-        <p>일러스트를 사용한 풍경 포스터</p>
-      </div>
-      <div class="image-frame">
-        <img src="./학교 실내 1.png" alt="">
-        <p>언리얼 엔진을 사용한 학교 실사화 레벨 제작 강의실 1</p>
-      </div>
-      <div class="image-frame">
-        <img src="./학교 실내 2.png" alt="">
-        <p>언리얼 엔진을 사용한 학교 실사화 레벨 제작 강의실 2</p>
-      </div>
-      <div class="image-frame">
-        <img src="./학교 실내 3.png" alt="">
-        <p>언리얼 엔진을 사용한 학교 실사화 레벨 제작 강의실 3</p>
-      </div>
-    </div>
-
-    <h2>프론트앤드</h2>
-    <div class="image-grid">
-      <div class="image-frame">
-        <img src="./" alt="">
-
-    <h2>백앤드</h2>
-    <div class="image-grid">
-      <div class="image-frame">
-        <img src="./" alt="">
   
-    <h2>데이터 분석</h2>
-    <div class="image-grid">
-      <div class="image-frame">
-          <img src="./" alt="">
+  
+  
+  
 
-    <h2>동영상</h2>
-    <video width="640" height="360" controls>
-      <source src="./언리얼 동영상.mp4" type="">
-    </video>     
-      <p>설명칸</p>
-  </section>
+
+<section id="project">
+  <h1 style="font-size: 100px;">Projects</h1>
+  <h2 style="font-size: 70px;">디자인</h2>
+  <div class="image-grid" style="display: flex; flex-direction: column;">
+    <div class="image-frame" style="display: flex; align-items: center; margin-bottom: 20px;">
+      <img src="./일러스트 배경.png" alt="" style="width: 1600px; height: 900px; margin-right: 20px;">
+      <p style="font-family: 'Cormorant Garamond', serif; font-size: 50px;">일러스트를 사용한 풍경 포스터</p>
+    </div>
+    <div class="image-grid" style="display: flex; flex-direction: column;">
+      <div class="image-frame" style="display: flex; align-items: center; margin-bottom: 20px;">
+        <img src="./내부1 배경제거.png" alt="" style="width: 1600px; height: 900px; margin-right: 20px;">
+        <p style="font-family: 'Cormorant Garamond', serif; font-size: 50px;">언리얼 엔진을 사용한 학교 실사화 레벨 제작 강의실 1</p>
+    </div>
+    <div class="image-grid" style="display: flex; flex-direction: column;">
+      <div class="image-frame" style="display: flex; align-items: center; margin-bottom: 20px;">
+        <img src="학교 내부 2.png" alt="" style="width: 1600px; height: 900px; margin-right: 20px;">
+        <p style="font-family: 'Cormorant Garamond', serif; font-size: 50px;">언리얼 엔진을 사용한 학교 실사화 레벨 제작 강의실 2</p>
+    </div>
+    <div class="image-grid" style="display: flex; flex-direction: column;">
+      <div class="image-frame" style="display: flex; align-items: center; margin-bottom: 20px;">
+        <img src="학교 내부 3.png" alt="" style="width: 1600px; height: 900px; margin-right: 20px;">
+        <p style="font-family: 'Cormorant Garamond', serif; font-size: 50px;">언리얼 엔진을 사용한 학교 실사화 레벨 제작 강의실 3</p>
+    </div>
+
+    <h2 style="font-size: 70px;">프론트앤드</h2>
+    <div class="image-frame" style="display: flex; align-items: center; margin-bottom: 20px;">
+      <img src="프론트앤드 사진 배경제거.png" alt="" style="width: 1600px; height: 900px; margin-right: 20px;">
+      <p style="font-family: 'Cormorant Garamond', serif; font-size: 50px;">Visual studio code를 사용한 웹 사이트 제작</p>
+    </div>
+
+
+
+
+    <h2 style="font-size: 70px;">백앤드</h2>
+    <div class="image-frame" style="display: flex; align-items: center; margin-bottom: 20px;">
+      <img src="" alt="" style="width: 1600px; height: 900px; margin-right: 20px;">
+      <p style="font-family: 'Cormorant Garamond', serif; font-size: 50px;">여기에 하고 싶은 설명</p>
+      </div>
+
+      <h2 style="font-size: 70px;">데이터 분석</h2>
+      <div class="image-frame" style="display: flex; align-items: center; margin-bottom: 20px;">
+        <img src="" alt="" style="width: 1600px; height: 900px; margin-right: 20px;">
+        <p style="font-family: 'Cormorant Garamond', serif; font-size: 50px;">여기에 하고 싶은 설명</p>
+      </div>
+
+<section id="video-section" style="text-align: center;">
+  <h2 style="font-size: 70px;">동영상</h2>
+  <video width="1000" height="880" controls style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+    <source src="./언리얼 동영상.mp4" type="video/mp4">
+  </video>     
+</section>
+
 
   <section id="skills">
-    <h2>Skills</h2>
+    <h2 style="font-size: 100px;">Skill</h2>
     <div>
       <img src="skill1.jpg" alt="Skill 1">
       <img src="skill2.jpg" alt="Skill 2">
@@ -286,10 +320,12 @@
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: example@example.com</p>
-    <p>Phone: +1234567890</p>
+    <h2 style="font-size: 100px;">Contact</h2>
+    <p style="font-family: 'Cormorant Garamond', serif; font-size: 50px;">Email: db25441@naver.com</p>
+    <p style="font-family: 'Cormorant Garamond', serif; font-size: 50px;">Phone: 010-2800-2544</p>
+
   </section>
 
+  <script src="test.js"></script>
 </body>
 </html>
